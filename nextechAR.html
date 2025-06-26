@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--script written for font awesome icons-->
+    <title>Nextech AR</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+        * {
+            margin: 0%;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(3, 14, 49, 1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .top{
+            width: 8vw;
+            font-size: 1.3vw;
+            margin-top: 2vw;
+            text-align: center;
+        }
+        .top:hover{
+            background-color: rgba(3, 14, 49, 1);
+            color: rgb(126, 123, 123);
+        }
+        .top ul li{
+            font-size: 1.2vw;
+            width: 13vw;
+            text-align: left;
+        }
+        .top ul li:hover{
+            background-color: rgb(126, 123, 123);
+        }
+        .headernav ul {
+            display: flex;
+            list-style: none;
+        }	
+        .headernav ul li{
+            height: 5vh;
+            color: white;
+            position: relative;
+            font-family: "Roboto" , sans-serif;
+            font-weight: 200;
+            background-color: rgba(3, 14, 49, 1);
+            padding: 0.4vw;
+        }	
+        .headernav ul li:hover{
+            transition: 0.3s;
+        }
+        .headernav ul ul{
+            display: none;	
+            margin-top: 0.9vw;
+        }
+        .headernav ul li:hover > ul{
+            display: block;	
+            transition: 0.3s;
+        }
+        main{
+            background-image: url(https://www.cim.org/media/3789/digital-background.png);
+            background-size: contain;
+            padding: 15vh 15vw;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: space-between;
+        }
+        .mainheading{
+            width: 35vw;
+            font-size: 2.7vw;
+            font-weight: 500;
+            color: white;
+        }
+        .mainheading span{
+            background: linear-gradient(#FFC929, #FF7663);
+            /* -webkit-background-clip: text; */
+            -webkit-text-fill-color: transparent;
+        }
+        .mainheading p{
+            font-size: 1.4vw;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+        }
+        button{
+            padding: 0.8vw;
+            color: #555454;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1vw;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        .brands{
+            background-color: #030e31;
+            height: 15vh;
+            padding-left: 18vw;
+            padding-top: 3vh;
+        }
+        .brands img{
+            width: 15%;
+        }
+        .video{
+            background-image: url(https://www.cim.org/media/3789/digital-background.png);
+            background-size: contain;
+            padding: 10vh 15vw;
+            font-family: sans-serif;
+            text-align: center;
+            color: white;
+            letter-spacing: 0.2vw;
+        }
+        .video img{
+            margin: 5vw;
+            width: 50vw;
+        }
+        .industry{
+            padding: 8vh 15vw;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: black;
+        }
+        .industry span{
+            font-size: 3vw;
+            font-weight: 700;
+            line-height: 5vw;
+        }
+        .industry p{
+            font-size: 1.5vw;
+            color: rgb(53, 62, 90);
+        }
+        .apps {
+            padding: 3vw;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .apps strong{
+            width: 20vw;
+        }
+        .apps span{
+            line-height: 1vw;
+            font-size: 2vw;
+        }
+        .apps strong img{
+            margin: 3vw 1vw 0 1vw;
+        }
+        .place{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0vw 10vw;
+        }
+        .placecontainer{
+            text-align: center;
+            width: 35vw;
+            margin: 4vw 2vw;
+            font-family: 'Roboto', sans-serif;
+        }
+        .placecontainer img{
+            width: 35vw;
+            height: 45vh
+        }
+        .placecontainer span{
+            color: #0038a8;
+            font-size: 1.8vw;
+            font-weight: 600;
+            line-height: 3vw;
+        }
+        .placecontainer p{
+            color: rgb(53, 62, 90);
+            font-size: 1.2vw;
+        }
+        .features{
+            background: linear-gradient(#031941 10%, #2b1056 30%,black 70%);
+            padding: 8vh 10vw;
+            
+        }
+        .features strong{
+            font-size: 3vw;
+            padding-left: 18vw;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        .ar{
+            width: 24vw;
+            font-family: 'Roboto', sans-serif;
+            margin: 2vw 1vw;
+        }
+        .featurescontainer{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .ar p{
+            color: white;
+            font-size: 1.3vw;
+            line-height: 2.5vw;
+        }
+        .ar span{
+            color: rgb(0, 225, 255);
+            margin:  2vh 0;
+        }
+        .map{
+            width: 11vw;
+        }
+        .labs{
+            width: 18vw;
+        }
+        .query {
+            margin: 5vw 10vw;
+            border-radius: 1vw;
+            padding: 5vw;
+            background: linear-gradient(#dcdff4, #e0edf4);
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .query1 {
+            width: 50%;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 3vw;
+        }
+
+        .query2 {
+            font-weight: 700;
+            font-size: 2vw;
+            display: flex;
+            padding-left: 4vw;
+            padding-top: 2vh;
+            border-radius: 1.5vh;
+        }
+
+        .query2 img {
+            margin-right: 2vw;
+        }
+
+        .name {
+            color: #2346FF;
+        }
+
+        .query2:hover {
+            background-color: #f5f9ff;
+            transition: 0.3s ease-in-out;
+        }
+
+        .para {
+            font-size: 1.3vw;
+            color: rgb(65, 63, 63);
+            font-weight: 200;
+            line-height: 2vw;
+            padding: 1vh;
+            /* display: none; */
+        }
+        .other{
+            padding-top: 5vw;
+        }
+        .results{
+            text-align: center;
+            font-size: 3vw;
+            font-weight: 600;
+            padding: 6vw;
+        }
+        .graph{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .graphcont{
+            width: 30%;
+            font-size: 2vw;
+            font-weight: 100;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 1vw;
+        }
+        .graphcont img{
+            width: 40%;
+        }
+        .results button{
+            color: #2e6fff;
+            font-size: 1.5vw;
+            border-radius: 1vh;
+            border-color: #2e6fff;
+            margin: 1vw;
+            background: white;
+        }
+        .results button:hover{
+            color: #444;
+            border-color: #444;
+        }
+        .solution{
+            background-color: rgb(2 11 39);
+            font-size: 3vw;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: white;
+            padding: 6vw 15vw;
+        }
+        .solutioncont{
+            margin-top: 5vw;
+        }
+        .solutioncont p{
+            font-size: 1.5vw;
+            font-weight:lighter;
+            line-height: 3vw;
+        }
+        .solutioncont span{
+            color: #00a4bd;
+            font-weight: 800;
+            font-size: 1.4vw;
+        }
+        .solutioncont img{
+           width: 90%;
+        }
+        .solutioncont h5{
+            font-weight: 400;
+        }
+        .opinion{
+            padding: 4vw;
+            font-size: 3vw;
+            font-weight: 600;
+            text-align: center;
+            font-family: 'Roboto' , sans-serif;
+        }
+        .opinion p{
+            font-size: 1.4vw;
+            line-height: 8vh;
+            font-weight: 300;
+            color: #444;
+            font-family: 'Roboto' , sans-serif;
+        }
+        .opinioncont{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .opinion1img{
+            padding: 1vw;
+            width: 12%;
+        }
+        .opinion1{
+            border-radius: 1vw;
+            box-shadow: 0 0 5px  #999;
+            padding: 1.6vw;
+            width: 25vw;
+            height: 90vh;
+            margin: 1vw;
+        }
+        .opinion1 p{
+            line-height: 2.3vw;
+            letter-spacing: 0.01vh;
+            font-weight: 100;
+            padding: 1vw 0;
+        }
+        .opinion span{
+            font-size: 1.6vw;
+            font-weight: 600;
+        }
+        .opinionimg{
+            width: 47%;
+        }
+        .opinion button{
+            color: #2e6fff;
+            font-size: 1.5vw;
+            border-radius: 1vh;
+            border-color: #2e6fff;
+            margin: 1vw;
+            background: white;
+        }
+        .opinion button:hover{
+            color: #444;
+            border-color: #444;
+        }
+        .news{
+            padding: 4vw ;
+            font-size: 3vw;
+            font-weight: 600;
+            text-align: center;
+            font-family: 'Roboto' , sans-serif;
+            align-items: center;
+        }
+        .newsbox{
+            width: 25%;
+            height: 80%;
+            padding: 2vw;
+            margin: 1vw;
+            border: 1px solid rgb(110, 109, 109);
+            border-radius: 10px;
+            text-align: left;
+        }
+        .newscont{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5vw;
+        }
+        .newscont img{
+            width: 100%;
+        }
+        .newscont span{
+            font-size: 1vw;
+
+        }
+        .newscont h4{
+            font-size: 1.6vw;
+            padding: 2vw 0;
+            font-weight: 600;
+        }
+        .newscont p{
+            font-size: 1.3vw;
+            font-weight: 100;
+
+        }
+        .news button{
+            color: #2e6fff;
+            font-size: 1.5vw;
+            border-radius: 1vh;
+            border-color: #2e6fff;
+            margin: 1vw;
+            background: white;
+        }
+        .news button:hover{
+            color: #444;
+            border-color: #444;
+        }
+        .learn{
+            color: #2c05b8;
+        }
+        .contact{
+            background-color: rgb(2 11 39);
+            font-size: 2.4vw;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: white;
+            padding: 6vw 15vw;
+            font-weight: 400;
+        }
+        .contact button{
+            margin-top: 3vw;
+        }
+        footer{
+            background-color: rgb(2 11 39);
+            font-size: 1.4vw;
+            font-weight: 100;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            padding: 0 6vw;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .about{
+            line-height: 3vw;
+            margin: 3vw;
+        }
+        .about span{
+            font-weight: 700;
+            font-size: 1.6vw;
+        }
+        .media a{
+            color: white;
+            background-color: rgb(2 11 39);
+        }
+        .available{
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Roboto' , sans-serif;
+            border-top: 2px solid white;
+            margin: 2vw;
+            padding: 2vw 0;
+        }
+        .terms{
+            margin: 0 3vw;
+        }
+        .footerimg{
+            font-size: 1vw;
+        }
+        .phone{
+            display: none;
+        }
+        .mainimg{
+            background-image: url("https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/landing_hero_2021.png?width=2022&name=landing_hero_2021.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 40vw;
+            animation: bgcolorchng infinite  linear 3s alternate;
+        }
+        @keyframes bgcolorchng {
+            0%   {background-image: url("https://www.nextechar.com/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/header%20image%2003_3.png");}
+            25%   {background-image: url("https://www.nextechar.com/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/header%20image%2003_3.png");}
+            50%  {background-image: url("https://www.nextechar.com/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/header%20image%2001_3.png");}
+            75%  {background-image: url("https://www.nextechar.com/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/header%20image%2001_3.png");}
+            85%  { background-image: url("https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/landing_hero_2021.png?width=2022&name=landing_hero_2021.png");}
+            100%  { background-image: url("https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/landing_hero_2021.png?width=2022&name=landing_hero_2021.png");}
+        }
+        .mainimg img{
+            display: none;
+        }
+        @media screen and (max-width: 900px){
+            .headernav , .mainimg{
+                display: none;
+            }
+            header img{
+                width: 60vw;
+            }
+            .phone:hover .bar{
+                display: inline-block;
+	        }
+            .phone{
+                display: inline;
+                float: right;
+	        }
+	        .phoneimg {
+                width: 20vw;
+                height: 11vh;
+                border-radius: 1vh;
+            }
+            .bar{
+                display: none;
+                position: absolute;
+                list-style: none;
+                text-decoration: none;
+                top: 10vh;
+                right: 4vh;
+            }
+            .bar li a {
+                color: black;
+                font-family: 'Poppins', sans-serif;	
+            }
+            .bar li{
+                border: 1px solid black;
+                margin: 0;
+                padding: 1vw;
+                background-color: white;
+                color: black;
+            }
+            .mainheading {
+                font-size: 8.7vw;
+                width: 80vw;
+            }
+            .mainheading p {
+                font-size: 5.4vw;
+            }
+            .mainimg img{
+                display: none;
+                position: relative;
+                width: 75vw;
+            }
+            button {
+                font-size: 5.1vw;
+            }
+            .brands img {
+                width: 50%;
+            }
+            .brands {
+                height: 50vh;
+                padding-left: 29vw;
+            }
+            .industry span {
+                font-size: 8vw;
+                line-height: 12vw;
+            }
+            .industry p {
+                font-size: 5.5vw;
+            }
+            .apps strong {
+                width: 68vw;
+            }
+            .apps{
+                padding: 0;
+            }
+            .placecontainer img {
+                width: 70vw;
+                height: auto;
+            }
+            .placecontainer {
+                width: 74vw;
+                margin: 5vw;
+            }
+            .placecontainer span {
+                font-size: 5.8vw;
+                line-height: 8vw;
+            }
+            .placecontainer p {
+                font-size: 6.2vw;
+            }
+            .ar {
+                width: 75vw;
+                margin: 5vw 1vw;
+            }
+            .ar p {
+                font-size: 4.3vw;
+                line-height: 8.5vw;
+            }
+            .map {
+                width: 56vw;
+            }
+            .labs {
+                width: 75vw;
+            }
+            .features strong {
+                font-size: 5.5vw;
+                padding-left: 0;
+            }
+            .query1 {
+                width: 100%;
+                font-size: 7vw;
+            }
+            .query2 {
+                font-weight: 700;
+                font-size: 7vw;
+            }
+            .results {
+                font-size: 7vw;
+            }
+            .graphcont {
+                width: 93%;
+                font-size: 6vw;
+                margin: 5vw
+            }
+            .results button {
+                font-size: 5.5vw;
+            }
+            .solution {
+                font-size: 5.1vw;
+                padding: 16vw 15vw;
+            }
+            .solutioncont img {
+                width: 100%;
+            }
+            .solutioncont p {
+                font-size: 3.5vw;
+                line-height: 5vw;
+            }
+            .solutioncont span {
+                font-size: 3.9vw;
+            }
+            .solutioncont {
+                margin-top: 10.3vw;
+            }
+            .opinion {
+                padding: 10vw;
+                font-size: 7vw;
+            }
+            .opinion p {
+                font-size: 4.4vw;
+                line-height: 5vh;
+            }
+            .opinion1 {
+                width: 82vw;
+                height: auto;
+                margin: 3vw;
+            }
+            .opinion span {
+                font-size: 5.6vw;
+            }
+            .opinion button {
+                font-size: 4.5vw;
+            }
+            .news {
+                font-size: 6vw;
+            }
+            .newsbox {
+                width: 92%;
+                margin: 4vw;
+            }
+            .newscont span {
+                font-size: 4vw;
+        }
+        .newscont h4 {
+            font-size: 4.6vw;
+            padding: 5vw 0;
+        }
+        .newscont p {
+            font-size: 4.3vw;
+        }
+        .news button {
+            font-size: 5.5vw;
+        }
+        .contact {
+            font-size: 5.4vw;
+        }
+        .about {
+            line-height: 8vw;
+        }
+        footer{
+            font-size: 5.4vw;
+        }
+        .about span {
+            font-size: 6.6vw;
+        }
+        .footerimg {
+            font-size: 4vw;
+        }
+        .terms {
+            margin: 9vw 0;
+            font-size: 4.5vw;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header><!--Start of header tag -->
+        <img src="https://www.nextechar.com/hs-fs/hubfs/Logos/Nextech_AR_Your_metaverse_company_Primary_Wide_Light.png?width=300&height=92&name=Nextech_AR_Your_metaverse_company_Primary_Wide_Light.png"
+        alt="logo" height="70%"><!-- header logo -->
+            <div class="headernav"><!--start of headernav-->
+          <ul><!--start of unordered list-->
+           <li class="top">Metaverse</li><!--lists-->
+
+           <li class="top">Solutions
+                <ul>
+                   <li>Ecommerce</li>
+                   <li>Ads and Marketing</li>
+                   <li>Education</li>
+                   <li>Event Solutions</li>
+                </ul>
+            </li>
+
+            <li class="top">Our Products
+               <ul>
+                   <li>ARitize 3D</li>
+                   <li>ARitize Maps</li>
+                   <li>ARitize Holograms</li>
+                   <li>ARitize CAD</li>
+                   <li>ARitize Labs</li>
+                   <li>ARitize CPG</li>
+                   <li>Maps D </li>
+                   <li>ARitize Events 3D</li>
+                   <li>ARitize ADS</li>
+               </ul>
+            </li>
+
+            <li class="top">About
+                <ul>
+                    <li>Customer Reviews</li>
+                    <li>Blog</li>
+                    <li>Partnerships</li>
+                    <li>Careers</li>
+                </ul>
+            </li>
+
+            <li class="top">For Investors
+                <ul>
+                    <li>Overview</li>
+                    <li>Press Releases</li>
+                    <li>Financial Info</li>
+                    <li>Sources</li>
+                    <li>Support & Contact</li>
+                    <li>Stock Info</li>
+                </ul>
+            </li>
+
+            <li class="top">Contact Us</li>
+          </ul><!--end of unordered list-->
+         </div><!--end of headernav class-->
+         <div class="phone"><!--phone div used only in phone(media-queries)-->
+            <img class="phoneimg" src="https://icon-library.com/images/3-dot-icon/3-dot-icon-0.jpg" width="60vh"><!--3 dots img-->
+            <div class="bar"><!--Start of bar div-->
+                <li><a href="">HOME</a></li><!--Li with link in it-->
+                <li><a href="">RESUME</a></li>
+                <li><a href="">EXPERIENCE</a></li>
+                <li><a href="">SKILLS</a></li>
+                <li><a href="">CONTACT</a></li>
+            </div><!--End of bar div-->
+        </div><!--End of phone div-->
+    </header><!--End of header-->
+
+    <main><!--Start of main tag-->
+        <div class="mainheading"><!--Start of main heading div-->
+            <span class="orange">Fast, Easy, Affordable</span><br>
+            Tools To Build Your 3D Models and Metaverse <br>
+            <p>Supercharge your ecommerce, entertainment, education and engagement with our low-cost,
+                high-quality pioneering technology like 3D models, holograms, virtual events, 3D ads, spatial mapping, CAD to Poly and more!</p>
+                <button>Get Started Today!</button>
+        </div><!--End of main heading div-->
+        <div class="mainimg"></div><!--empty div with background image and animation applied to it-->
+    </main><!--End of main tag-->
+
+    <div class="brands"><!--Start of brand div with images of brands-->
+        <img src = "https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/Clients/White/walmart.png?width=375&height=195&name=walmart.png">
+        <img src = "https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/Clients/White/pier1.png?width=375&height=195&name=pier1.png">
+        <img src = "https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/Clients/White/wayfair.png?width=375&height=195&name=wayfair.png">
+        <img src = "https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/Clients/White/target.png?width=750&height=390&name=target.png">
+        <img src = "https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/Clients/White/Kmart.png?width=375&height=195&name=Kmart.png">
+    </div><!--End of brands div-->
+
+    <div class="video"><!--Start of Video div which contains images-->
+        <h1>End-to-end Augmented Reality solutions for everyone</h1><br>
+        <span>Engage customers on any channel, any time.</span><br>
+        <img src="https://www.irishtimes.com/polopoly_fs/1.2946618.1485152721!/image/image.jpg">
+    </div><!--End of video div-->
+
+    <div class="industry"><!--Start of industry div-->
+        <span>Industry leading augmented reality</span>
+        <p>From ecommerce to industrial manufacturing, augmented reality is already an indispensable component of everyday life. What we're seeing is just the beginning. Our technology is fully compliant and integrates with all major platforms.</p>
+        <div class="apps"><!--Start of subdiv "apps"-->
+            <strong><img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/homepage%20check.png?width=44&name=homepage%20check.png"><span>WebAR</span></strong><br>
+            <strong><img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/homepage%20check.png?width=44&name=homepage%20check.png"><span>Apple IOS</span></strong><br>
+
+            <strong><img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/homepage%20check.png?width=44&name=homepage%20check.png"><span>Google Android</span></strong><br>
+        </div><!--End of apps sub div-->
+    </div><!--End of industry div-->
+
+        <div class="place"><!--Start of place div with few subdivs named "placecontainer"-->
+            <div class="placecontainer">
+                <img src="https://cdn.vidyard.com/thumbnails/MqHZ-QFqs1X4dMGxwIk6qA/41fd8f51b54367b5914e27.jpg"><br>
+                <span>Getting Started with the Metaverse</span><br>
+                <p>Unlock your Metaverse with Nextech AR Solutions. The Nextech AR stack includes end-to-end solutions to power your digital vision in the metaverse.</p>
+             </div>
+
+             <div class="placecontainer">
+                <img src="https://www.proactiveinvestors.com/thumbs/upload/News/Image/2021_06/672z311_1623847194_Screen-Shot-2020-12-23-at-8.26.31-AM.jpg"><br>
+                <span>AR Human Holograms & Smart Packaging</span><br>
+                <p>ARitize Holograms adds a human element to product walkthroughs, remote virtual performances, instructional videos and more.</p>
+             </div>
+
+            <div class="placecontainer">
+                <img src="https://cdn.vidyard.com/thumbnails/_HZKFe4U6ZP3LHqMFiU2Ow/4a57359d162be1fd352434.jpg"><br>
+                <span>WebAR & AR Products</span><br>
+                <p>Turn your physical products into 3D and augmented reality models and view them by simply scanning a QR code.</p>
+             </div>
+
+             <div class="placecontainer">
+                <img src="https://www.nextechar.com/hubfs/Marketing%20Assets/Images/Image1_Clickthrough_002.jpg"><br>
+                <span>AR Display Advertising</span><br>
+                <p>Increase CTR and conversions with the power of augmented reality ad banners.</p>
+            </div>
+
+            <div class="placecontainer">
+                <img src="https://cdn.vidyard.com/thumbnails/GOz5tmsBFEvu54Iv3pQk1A/c5ca6492f72b4f4f6a8d26.jpg"><br>
+                <span>360° AR Portals</span><br>
+                <p>Immerse audiences in a 360 experience where viewers walk through a virtual door into an amazing virtual environment.</p>
+            </div>
+
+            <div class="placecontainer">
+                <img src="https://cdn.vidyard.com/thumbnails/MZBsWM-uv4eBwKcf4WczdQ/e8a046ff92dce9c11fa32d.jpg"><br>
+                <span>AR Display Advertising</span><br>
+                <p>Take your students on an exciting and engaging learning journey beyond traditional classrooms with immersive augmented learning labs.</p>
+            </div>
+        </div><!--End of place div-->
+
+        <div class="features"><!--Start of features div with styles given to heading-->
+            <strong>Featured Nextech AR products</strong>
+            <div class="featurescontainer"><!--Start of Featurescontainer div which contains few subdivs named "ar"-->
+            <div class="ar">
+                <img src="https://www.nextechar.com/hubfs/Logos/Aritize%20Logos/Aritize3D/svgs/ARitize_3D_Primary_Wide_Light%20(1).svg"><br>
+                <p>Turn your existing 2D product images into exciting, high-quality 3D and AR content. Nextech AR’s pioneering Artificial Intelligence enables a speed, cost, and ease that simply can't be matched.​</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="ar">
+                <img src="https://www.nextechar.com/hubfs/Logos/Aritize%20Logos/AritizeAds/svgs/ARitize_Ads_Primary_Wide_Light%20(1).svg"><br>
+                <p>Deliver this amazing content through Nextech AR’s innovative 3D/AR ad solutions to nail your KPIs and maximize your marketing ROI.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="ar">
+                <img src="https://www.nextechar.com/hubfs/Logos/Aritize%20Logos/AritizeCPG/svgs/ARitize_CPG_Primary_Wide_Light%20(1).svg"><br>
+                <p>Easily create unique, engaging content with no special requirements through AR hologram experiences triggered by a visual anchor/QR code placed on product packaging, in-store aisles or endcap displays. ​</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="ar">
+                <img src="https://www.nextechar.com/hubfs/Logos/Aritize%20Logos/AritizeEvents/svgs/ARitize_Events_3D_Primary_Wide_Light.svg"><br>
+                <p>Keep your audiences engaged with stunning holograms, AR product show cases, 3D product visualizations and AR experiences with our LiveX Virtual Events platform.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="ar">
+                <img class="map" src="https://www.nextechar.com/hubfs/Logos/Aritize%20Logos/mapd/svgs/MapD_Small_Light.svg"><br>
+                <p>Use Map D to easily create your next virtual, in-person, or hybrid event using a rich set of online tools paired with dedicated guidance and support.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="ar">
+                <img class="labs" src="https://www.nextechar.com/hubfs/Logos/Aritize%20Logos/AritizeLabs/svgs/ARitize_Labs_Primary_Wide_Light%20(1).svg"><br>
+                <p>Learn more about the latest hands-on virtual experiences in technology in our AR Labs solution. Browse our collection, create new experiences and improve your institution’s immersive learning offerings.​</p>
+                <span>Learn More</span>
+            </div>
+        </div><!--End of featurescontainer div-->
+        </div><!--End of features div-->
+
+
+        <div class="query">
+            <!--Start of query div-->
+            <div class="query1">
+                <!--Start of Query1 div created for the purpos of giving styles to heading-->
+                Why choose Nextech for your business?
+            </div>
+            <!--End of query1 div-->
+    
+            <div class="query1 other">
+                <!--Start of div with two classes. Namely: query1 , other. It contains subdivs named as query2-->
+                <div class="query2">
+                    <div class="queryimg"><img class="img"
+                            src="https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"></div>
+                    <div class="name">FAST
+                        <div class="para">Get thousands of 3D products on your site in just a few hours or days.</div>
+                    </div>
+                </div>
+    
+                <div class="query2">
+                    <div class="queryimg"><img class="img"
+                            src="https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"></div>
+                    <div class="name">AFFORDABLE
+                        <div class="para">Generate the highest quality 3D models ​for the lowest possible cost – Nextech AR
+                            is unmatched!</div>
+                    </div>
+                </div>
+    
+                <div class="query2">
+                    <div class="queryimg"><img class="img"
+                            src="https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"></div>
+                    <div class="name">EASY
+                        <div class="para">We use a few of your product images and our AI turns them into high-quality 3D
+                            visuals that customers can place in their room before buying.</div>
+                    </div>
+                </div>
+    
+                <div class="query2">
+                    <div class="queryimg"><img class="img"
+                            src="https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"></div>
+                    <div class="name">SCALABE
+                        <div class="para">Pick a plan based on the number of product SKUs that you need and let our
+                            AI-powered technology turn your images into 3D visuals.</div>
+                    </div>
+                </div>
+    
+                <div class="query2">
+                    <div class="queryimg"><img class="img"
+                            src="https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"></div>
+                    <div class="name">DRIVES RESULT
+                        <div class="para">Use our analytics dashboard to track and measure increased product engagement,
+                            interaction and new revenue — in real-time.</div>
+                    </div>
+                </div>
+    
+                <div class="query2">
+                    <div class="queryimg"><img class="img"
+                            src="https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"></div>
+                    <div class="name">CONTROL
+                        <div class="para">Review, approve and push 3D models live on your product pages.</div>
+                    </div>
+                </div>
+            </div>
+            <!--End of query1 div-->
+        </div>
+        <!--End of query div-->
+
+
+        <div class="results"><!--Start of results div styled for heading-->
+            Results with AR solutions
+            <div class="graph"><!--Start of graph div containing subdivs named "graphcont"-->
+                <div class="graphcont"><img src="https://f.hubspotusercontent20.net/hubfs/4391972/Marketing%20Assets/Images/Home%20Page%20(Updated)/ic_increase.png"><br>
+                    <span>94%</span> higher conversion rates for AR-enabled products
+                </div>
+
+                <div class="graphcont"><img src="https://f.hubspotusercontent20.net/hubfs/4391972/Marketing%20Assets/Images/Home%20Page%20(Updated)/ic_ar.png"><br>
+                    <span>71%</span> of consumers would shop more frequently if using AR
+                </div>
+                <div class="graphcont"><img src="https://f.hubspotusercontent20.net/hubfs/4391972/Marketing%20Assets/Images/Home%20Page%20(Updated)/ic_retailers.png"><br>
+                    <span>61%</span> of consumers prefer retailers that offer AR
+                </div>
+            </div><!--End of graph div-->
+            <button>GET STARTED</button>
+        </div><!--End of results div-->
+
+
+        <div class="solution"><!--Start of solution div contains subdivs named "solutioncont"-->
+            Power up your online business with our AR solutions <br>
+            <div class="solutioncont">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/imagery_metaverse_desktop.png?width=1800&name=imagery_metaverse_desktop.png">
+                <h5>Metaverse</h5>
+                <p>Unlock your metaverse with Nextech AR Solutions. The Nextech AR stack allows for end-to-end solutions that will enable your participation in the metaverse landscape today and the future.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="solutioncont">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/imagery_metaverse_desktop.png?width=1800&name=imagery_metaverse_desktop.png">
+                <h5>Ecommerce</h5>
+                <p>Nextech AR provides you with a powerful end-to-end augmented reality platform designed specifically to increase online sales. Start with easy and scalable 3D model creation, grow with 3D advertising banners.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="solutioncont">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/imagery_ads%26marketing_desktop.png?width=1800&name=imagery_ads%26marketing_desktop.png">
+                <h5>Ads and Marketing</h5>
+                <p>Reach your audiences through our innovative 3D/Augmented Reality Ad solutions and private marketplaces, exceed your marketing ROI through Nextech AR 3D Ad Network.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="solutioncont">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/imagery_event_desktop.png?width=1800&name=imagery_event_desktop.png">
+                <h5>Event Solutions</h5>
+                <p>Keep your audiences engaged with stunning virtual conferences, trade shows, meetings and Augmented Reality experiences with our Virtual Events platform.</p>
+                <span>Learn More</span>
+            </div>
+
+            <div class="solutioncont">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/imagery_education_desktop.png?width=1800&name=imagery_education_desktop.png">
+                <h5>Education</h5>
+                <p>Take your students on an exciting and engaging learning journey beyond traditional classrooms with immersive augmented learning labs.</p>
+                <span>Learn More</span>
+            </div>
+        </div><!--End of solution div-->
+
+
+        <div class="opinion"><!--Start of opinion div containing h1 and p.-->
+            What our customers say <br>
+            <p>Deliver out-of-your-seat experiences for your shoppers across the globe.</p>
+            <div class="opinioncont"><!--Start of opinion div containing subdivs named"opinion1" and images with class name "opinion1img"-->
+                <div class="opinion1">
+                    <img class="opinion1img" src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/Homepage%20Quotation%20Marks.png?width=59&name=Homepage%20Quotation%20Marks.png" alt=""><p>We chose NexTech to ARitize™ our AEVA system because we know it will provide a better level of education for our product and empower the consumer’s path to purchase as they shop on our website. We’re excited to provide our consumers an AR shopping experience like no other in the agricultural industry.</p>
+                    <span>Kevin Jakiela</span><br>
+                    <p>Co-Founder</p>
+                    <img class="opinionimg" src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/Clients/New/JustVertical_logo_small_NexTechARsolutions_client_401x250.png?width=195&name=JustVertical_logo_small_NexTechARsolutions_client_401x250.png">
+                </div>
+
+                <div class="opinion1">
+                    <img class="opinion1img" src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/Homepage%20Quotation%20Marks.png?width=59&name=Homepage%20Quotation%20Marks.png" alt="">
+                    <p>As an event planner doing this virtual thing for the very first time, it was so reassuring to know that you didn't have to wait for days to get an answer from the Map Dynamics support team.</p>
+                    <span>Diane Killian</span><br>
+                    <p>Foundation of Douglas County Schools</p>
+                    <img class="opinionimg" src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Logos/BECMA.png?width=152&name=BECMA.png">
+                </div>
+                
+                <div class="opinion1">
+                    <img class="opinion1img" src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/Homepage%20Quotation%20Marks.png?width=59&name=Homepage%20Quotation%20Marks.png" alt="">
+                    <p>Nearly every campaign I run with Threedy.Ai ends up with at least 90% sales to reviews ratio - unmatched, predictable result I just didn't get anywhere else and I have tried dozens of other services.</p>
+                    <span>Jacob Jones</span><br>
+                    <p>Business Representative</p>
+                    <img class="opinionimg" src="https://www.nextechar.com/hs-fs/hubfs/Marketing%20Assets/Images/Home%20Page%20(Updated)/testimonial%20clients/Rectangle%202209.png?width=152&name=Rectangle%202209.png">
+                </div>
+            </div><!--End of opinioncont div-->
+            <button>See More Testimonials</button>
+        </div><!--End of opinion div-->
+        
+        
+        <div class="news"><!--Start of news div-->
+            Nextech AR latest news
+            <div class="newscont"><!--start of newscont div containing subdivs named "newsbox"-->
+                <div class="newsbox">
+                    <img src="https://f.hubspotusercontent20.net/hubfs/4391972/NFT%20Coverphoto.jpg"><br>
+                    <span>Jan 18, 2022</span>
+                    <h4>Nextech AR Launches ARitize NFT For its 3D Models and Human Holograms</h4>
+                    <p>Company’s 3D Model Factory Now Mints 3D models into NFT’s Listed on Rarible and OpenSea To Offer a Metaverse NFT...</p>
+                    <span class="learn">Read More ></span>
+                </div>
+                
+                <div class="newsbox">
+                    <img src="https://f.hubspotusercontent20.net/hubfs/4391972/NFT%20Coverphoto.jpg"><br>
+                    <span>Jan 12, 2022</span>
+                    <h4>Nextech AR Sees Strong 3D Model Demand From Large Its CAD To Poly 3D/AR Technology</h4>
+                    <p>Signs Multiple Deals for its CAD-Poly Solutions  VANCOUVER, B.C., Canada – January 6, 2022 - Nextech AR Solutions Corp....</p>
+                    <span class="learn">Read More ></span>
+                </div>
+                
+                <div class="newsbox">
+                    <img src="https://f.hubspotusercontent20.net/hubfs/4391972/PR%20Cover%20photo-1.jpg"><br>
+                    <span>Jan 12, 2022</span>
+                    <h4>Nextech AR Signs Large Enterprise 3D Modeling Deal For Ecommerce</h4>
+                    <p>Company is seeing rapidly growing demand for Its 3D Modeling and AR Visualization Solutions in Ecommerce manufacturing   VANCOUVER,...</p>
+                    <span class="learn">Read More ></span>
+                </div>
+            </div><!--End of newscont div-->
+            <button>Read More</button>
+        </div><!--End of news div-->
+
+
+        <div class="contact"><!--start of contact div-->
+            Ready to grow your business with Nextech AR Solutions?<br>
+            <button>Contact Us</button>
+        </div><!--End of contact div-->
+
+
+        <footer><!--start of footer tag containing divs named about , available-->
+            <div class="about">
+                <span>Solutions</span><br>
+                <li>Ecommerce</li>
+                <li>Ads & Marketing</li>
+                <li>Education</li>
+                <li>Event Solutions</li>
+            </div>
+
+            <div class="about">
+                <span>About</span><br>
+                <li>Customer Reviews</li>
+                <li>Blog</li>
+                <li>Partnerships</li>
+                <li>Careers</li>
+            </div>
+
+            <div class="about">
+                <span>For Investors</span><br>
+                <li>Overview</li>
+                <li>Press Releases</li>
+                <li>Financial Info</li>
+                <li>Sources</li>
+                <li>Stock Info</li>
+                <li>Support & Contact</li>
+            </div>
+            
+            <div class="about">
+                <span>Our Apps</span><br>
+                <li>ARitize<sup>TM</sup>App</li>
+
+                <li><img src="https://www.nextechar.com/hs-fs/hubfs/Appstore.png?width=150&name=Appstore.png" alt="">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Google.png?width=150&name=Google.png" alt=""></li>
+
+                <li>ARitize360<sup>TM</sup>App</li>
+
+                <li><img src="https://www.nextechar.com/hs-fs/hubfs/Appstore.png?width=150&name=Appstore.png" alt="">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Google.png?width=150&name=Google.png" alt=""></li>
+
+                <li>Airshow App</li>
+
+                <li><img src="https://www.nextechar.com/hs-fs/hubfs/Appstore.png?width=150&name=Appstore.png" alt="">
+                <img src="https://www.nextechar.com/hs-fs/hubfs/Google.png?width=150&name=Google.png" alt=""></li>
+            </div>
+
+            <div class="available"><!--start of available div-->
+                <div class="footerimg">
+                    <img src="https://www.nextechar.com/hs-fs/hubfs/Logos/MicrosoftTeams-image%20(124).png?width=300&name=MicrosoftTeams-image%20(124).png" alt=""><br>
+                    Copyright © 2021 Nextech AR Solutions Inc.
+                </div>
+
+                <div class="terms">Terms and Conditions &nbsp;&nbsp;| &nbsp;&nbsp; Privacy Policy</div>
+
+                <div class="media"><!--Start of media div containing all links of social media-->
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" style="padding: 2.4vh 3vh;"></i><!--This is an icon with stylling given directly--></a><!--This is a link with icon-->
+
+                    <a href="#"><i class="fab fa-youtube" style="padding: 2vh;"></i><!--This is an icon with stylling given directly--></a><!--This is a link with icon-->
+
+                    <a href="https://www.facebook.com/"><i class="fab fa-instagram" style="padding: 2.4vh 2.5vh;"></i><!--This is an icon with stylling given directly--></a><!--This is a link with icon-->
+
+                    <a href="https://www.instagram.com/"><i class="fab fa-linkedin-in" style="padding: 2.4vh 2.5vh;"></i><!--This is an icon with stylling given directly--></a><!--This is a link with icon-->
+
+                    <a href="https://www.instagram.com/"><i class="fab fa-telegram" style="padding: 2.4vh 2.5vh;"></i></a><!--This is an icon with stylling given directly-->
+                    <a href="https://www.instagram.com/"><i class="fab fa-tumblr" style="padding: 2.4vh 3vh; "></i></a>
+
+                    <a href="https://www.instagram.com/"><i class="fab fa-pinterest" style="padding: 2.4vh 2.5vh;"></i><!--This is an icon with stylling given directly--></a>
+
+                    <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter" style="padding: 2.4vh 2.5vh;"></i><!--This is an icon with stylling given directly--></a><!--This is a link with icon-->
+                </div><!--End of media div-->
+            </div><!--End of available div-->
+        </footer><!--End of footer tag-->
+    </body>
+    <script>
+                //to be put on hover(blue plus):   https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus-filled.svg
+        //to be put after clicking(minus): https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-minus.svg
+        console.log("Insha Allah this exercise will be a complete success")
+
+        //changing image on click
+        let img = document.getElementsByClassName("img")
+        Array.from(img).forEach(function (element) {
+            element.addEventListener("click", function () {
+                let elem1 = element
+                let para = element.parentElement.parentElement.children[1].children
+                Array.from(para).forEach(function (element) {
+                    let display = element.style.display
+                    console.log(display)
+                    if (element.style.display == "block") {
+                        element.style.display = "none"
+                        elem1.src = "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus-filled.svg"
+                    }
+                    else if (element.style.display == "none") {
+                        element.style.display = "block"
+                        elem1.src = "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-minus.svg"
+                    }
+                })
+            })
+        })
+
+        //plus for new para
+        let query2 = document.getElementsByClassName("query2")
+        Array.from(query2).forEach(function (element) {
+            let para = document.getElementsByClassName("para")
+            Array.from(para).forEach(function (element) {
+                element.style.display = "none"
+                if (element.style.display != "none") {
+                    console.log("if")
+                    element.style.display = "none"
+                }
+                else {
+                    element.addEventListener("click", function () {
+                        element.style = "display: block; transition: 1s;"
+                        element.style.transition = "1s"
+                    })
+                }
+            })
+        })
+
+
+        //changing image on hover:Mouse enter
+        let queryhover = document.getElementsByClassName("img")
+        Array.from(queryhover).forEach(function (element) {
+            element.parentElement.parentElement.addEventListener("mouseenter", function () {
+                if (element.src == "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg") {
+                    element.src = "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus-filled.svg"
+                }
+                if (element.src == "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-minus.svg") {
+                    element.src = "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-minus.svg"
+                }
+            })
+        })
+
+        //changing image on hover:Mouse leave
+        let qhover = document.getElementsByClassName("img")
+        Array.from(qhover).forEach(function (element) {
+            let elems = element
+            element.parentElement.parentElement.addEventListener("mouseleave", function () {
+                let paraimg = element.parentElement.parentElement.children[1].children
+                Array.from(paraimg).forEach(function (element) {
+                    if (element.style.display == "none") {
+                        elems.src = "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus.svg"
+                    }
+                    if (element.style.display == "block") {
+                        elems.src = "https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-minus.svg"
+                    }
+                })
+            })
+        })
+
+
+        a = document.images
+        Array.from(a).forEach(function(element,index){
+            console.log(element, index)
+        })
+
+        b = document.scripts
+        Array.from(b).forEach(function(element){
+            console.log(element)
+        })
+
+        c = document.links
+        Array.from(c).forEach(function(element,index){
+            if(element.href.includes("instagram")){
+                console.log(element)
+            }
+        })
+
+    </script>
+</html>
+        
+    <!-- https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-minus.svg //minus
+        https://www.nextechar.com/hubfs/Marketing%20Assets/Icons/blue-plus-filled.svg //plus blue 
+    https://muhammadisite.com/wp-content/uploads/2017/06/89-Surah-Al-Fajr.jpg -->
